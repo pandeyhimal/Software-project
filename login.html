@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Sanothimi Campus</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Sanothimi Campus</h1>
+      <div class="tab-container">
+        <div id="userTab" class="tab-button active">User Login</div>
+        <div id="adminTab" class="tab-button">Admin Login</div>
+      </div>
+
+      <!-- User Login Form -->
+      <form id="userLoginForm" class="login-form active">
+        <h3>User Access</h3>
+        <p>Sign in to your dashboard</p>
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your username"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <div class="one">
+            <label for="password">Password</label>
+            <a href="#">Forgot password?</a>
+          </div>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <br />
+        <button type="submit">Login</button>
+        <div class="switch-link">
+          Don't have an account? <a href="registration.html">Register</a>
+        </div>
+      </form>
+
+      <!-- Admin Login Form -->
+      <form id="adminLoginForm" class="login-form">
+        <h3>Admin Access</h3>
+        <p>Only for authorized user</p>
+        <div class="input-group">
+          <label for="adminUser">Admin Username</label>
+          <input
+            type="text"
+            id="adminUser"
+            placeholder="Enter admin username"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="adminPass">Password</label>
+          <input
+            type="password"
+            id="adminPass"
+            placeholder="Enter admin password"
+            required
+          />
+        </div>
+        <br />
+        <button type="button" onclick="adminLogin()">Login</button>
+        <p id="error" class="error"></p>
+      </form>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script>
+      const userTab = document.getElementById("userTab");
+      const adminTab = document.getElementById("adminTab");
+      const userLoginForm = document.getElementById("userLoginForm");
+      const adminLoginForm = document.getElementById("adminLoginForm");
+
+      userTab.addEventListener("click", () => {
+        userTab.classList.add("active");
+        adminTab.classList.remove("active");
+        userLoginForm.classList.add("active");
+        adminLoginForm.classList.remove("active");
+      });
+
+      adminTab.addEventListener("click", () => {
+        adminTab.classList.add("active");
+        userTab.classList.remove("active");
+        adminLoginForm.classList.add("active");
+        userLoginForm.classList.remove("active");
+      });
+
+      // Admin login validation
+      function adminLogin() {
+        const username = document.getElementById("adminUser").value.trim();
+        const password = document.getElementById("adminPass").value;
+
+        if (username === "admin" && password === "Admin@#123") {
+          window.location.href = "admin.html";
+        } else {
+          document.getElementById("error").innerText =
+            "Invalid admin credentials!";
+        }
+      }
+
+      // User login handler
+      userLoginForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        try {
+          const response = await fetch("http://localhost:3000/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password }),
+          });
+
+          const data = await response.json();
+
+          if (response.ok) {
+            showToast(`${data.message} \nWelcome ${data.username}`);
+            localStorage.setItem("loggedInUser", data.username);
+            localStorage.setItem("userEmail", data.email);
+            window.location.href = "a_index.html";
+          } else {
+            showToast(data.message || "Login failed");
+          }
+        } catch (err) {
+          console.error("Login error:", err);
+          showToast("Something went wrong! \n Please try again!");
+        }
+      });
+
+      // Toast notification
+      function showToast(message, duration = 5000) {
+        const toast = document.getElementById("toast");
+        toast.innerText = message;
+        toast.classList.remove("hidden");
+        toast.classList.add("show");
+
+        setTimeout(() => {
+          toast.classList.remove("show");
+          toast.classList.add("hidden");
+        }, duration);
+      }
+    </script>
+  </body>
+</html>

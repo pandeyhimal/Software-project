@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>School Management System</title>
+  <link rel="stylesheet" href="styles_dashboard.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- <marquee behavior="scroll" direction="left"
+        style="font-size: 40px; color: #01070e; font-weight: bold; margin: 10px 0;">
+        Welcome to Sanothimi Campus <br>
+      </marquee> -->
+      <div class="sidebar-header">
+        <!-- <img src="logo.png" alt="Sanothimi Campus Logo" class="logo" /> -->
+        <h3> Sanothimi Campus</h3>
+        <p>Affiliated by Tribhuwan University.</p>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#notices">Notices</a></li>
+          <li><a href="#blogs">Blogs</a></li>
+          <!-- <li><a href="#profile">Profile</a></li> -->
+          <li><a href="program & event">Programs & Events</a></li>
+          <li><a href="#contact">Contact US</a></li>
+          <li><a href="#logout" onclick="confirmLogout(event)">Log Out</a></li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <div class="topbar">
+        <div class="logo">
+          <img src="logo.png" alt="Sanothimi Campus Logo" />
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
+        </div>
+        <div class="notifications">
+          <!-- <img src="icons/notification.svg" alt="Notifications">
+          <img src="icons/message.svg" alt="Messages"> -->
+          <a href="#">News and Notices</a>
+          <a href="#contact">Contacts</a>
+          <!-- <a href="#">User</a> -->
+          <img src="#" alt="User">
+        </div>
+      </div>
+      <!-- Home Page Content -->
+      <section id="home" class="intro">
+        <div class="intro1">
+          <h1>Welcome to Sanothimi Campus!</h1>
+          <p>Empowering students with innovation, technology, and excellence in education.</p>
+          <img src="sanothimi.jpg" alt="College" class="intro-img" />
+
+          <section class="about-section">
+            <h2>📚 About History of Sanothimi Campus <br>
+              <i style="font-weight: 500; font-size: medium;"> – A Legacy of Excellence</i>
+            </h2>
+            <p style="margin-left: 30px;">Sanothimi Campus, officially known as <strong>Tribhuvan University Sanothimi
+                Education Campus</strong>, is one of the oldest and most prestigious education campuses in Nepal.
+              Established in <strong>2023 B.S. (1966 A.D.)</strong>, it was founded under the Ministry of Education to
+              provide professional teacher training and quality education in the field of <strong>education and
+                pedagogy</strong>.</p>
+
+            <p style="margin-left: 30px;">Located in <strong>Bhaktapur, Nepal</strong>, Sanothimi Campus played a
+              pioneering role in shaping Nepal’s education system by preparing thousands of competent educators and
+              academic leaders. Initially started with a focus on <em>Education and Teaching Training Programs</em>, the
+              campus later became a <strong>constituent campus of Tribhuvan University</strong>, Nepal’s oldest and
+              largest university.</p>
+
+            <p style="margin-left: 30px;">Over the years, Sanothimi Campus expanded its academic offerings to include
+              programs like:</p><br>
+            <ul style="margin-left: 80px;">
+              <li>Bachelor in Information Communication Technology Education (BICTE)</li>
+              <li>Bachelor of Education (B.Ed.) in various subjects</li>
+              <li>Master of Education (M.Ed.)</li>
+              <li>Post Graduate Diploma in Education (PGDE)</li>
+              <li>Special Need Education (SNE)</li>
+            </ul>
+
+            <p style="margin-left: 30px;">The campus is renowned for its highly experienced faculty, strong academic
+              environment, and dedication to excellence in teaching, learning, and research.</p>
+
+            <p style="margin-left: 30px;">With a rich legacy of over five decades, Sanothimi Campus continues to be a
+              center of academic distinction and a beacon for aspiring educators across the country.</p>
+          </section>
+          <!-- Awards Section -->
+          <section class="awards">
+            <h2>Our Achievements</h2>
+            <div class="award-grid">
+              <div class="award-card">
+                <h3>Best IT College 2024</h3>
+                <p>Awarded by Nepal Education Board</p>
+              </div>
+              <div class="award-card">
+                <h3>Innovation in Teaching</h3>
+                <p>Recognized by TechEdu Conference</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Testimonials Section -->
+          <div class="test-box">
+            <h2>Testimonials</h2>
+            <section class="slider-container">
+              <div class="testimonial-slider">
+                <div class="testimonial">
+                  <p>"The best place to grow and innovate!"</p>
+                  <h4>– Jeewan Pandey, <br>BICTE Graduate</h4>
+                </div>
+                <div class="testimonial">
+                  <p><i> "Sanothimi Campus provided me with the <br> perfect blend of academic knowledge <br>and
+                      real-world
+                      experience. <br>
+                      The professors were supportive, <br>and the learning environment was <br>truly inspiring. I owe
+                      my success to <br>
+                      this institution!"</i></p>
+                  <h4>– Saraswati Pandey, <br>BICTE Graduate, 2023
+                  </h4>
+                </div>
+                <div class="testimonial">
+                  <p><i>"The campus has grown so much in recent years. <br>From smart classrooms to digital libraries,
+                      <br> everything
+                      is modern and student-friendly. <br> I feel proud to be a part of Sanothimi Campus."</i></p>
+                  <h4>– Krishna Bhattarai, <br>Current Student, <br>B.Ed. 6th Semester</h4>
+                </div>
+                <div class="testimonial">
+                  <p><i>"Teaching at Sanothimi Campus has <br> been a rewarding journey. <br> The students are
+                      enthusiastic
+                      learners, <br>
+                      and the administration is always focused <br>on improving quality education."</i></p>
+                  <h4>– Bimal Diyal,<br>Faculty Member,<br> Department of Education</h4>
+                </div>
+                <div class="testimonial">
+                  <p><i> "Sanothimi Campus not only shaped my <br> career but also built my character. <br> The
+                      discipline, values, and
+                      confidence <br>I gained here have helped me reach <br>great heights."</i></p>
+                  <h4>– Bishal Kumar Mishra. ,<br> CEO, GS-Abroad Study</h4>
+                </div>
+                <div class="testimonial">
+                  <p><i>"I feel confident about my daughter’s <br> future knowing she’s in such a dedicated <br>and
+                      well-managed
+                      institution. <br>The academic support and campus <br>security are commendable."</i></p>
+                  <h4>– Tupesh Ghimire, <br>Parent of a First-Year Student
+                  </h4>
+                </div>
+              </div>
+            </section>
+          </div>
+
+
+          <!-- Dashboard section -->
+          <div id="dashboard">
+            <h2>Dashboard</h2>
+
+            <section class="dashboard">
+              <div class="card">
+                <h2 class="count" data-target="5">0</h2>
+                <p>Representatives</p>
+              </div>
+              <div class="card">
+                <h2 class="count" data-target="12">0</h2>
+                <p>Administrators</p>
+              </div>
+              <div class="card">
+                <h2 class="count" data-target="40">0</h2>
+                <p>Staff Members</p>
+              </div>
+              <div class="card">
+                <h2 class="count" data-target="25">0</h2>
+                <p>Professors</p>
+              </div>
+              <div class="card">
+                <h2 class="count" data-target="850">0</h2>
+                <p>Students</p>
+              </div>
+              <div class="card">
+                <h2>📅</h2>
+                <p>Upcoming Events</p>
+              </div>
+              <div class="card">
+                <h2>📝</h2>
+                <p>Recent Activities</p>
+              </div>
+              <div class="card">
+                <h2>📚</h2>
+                <p>Academic Resources</p>
+              </div>
+            </section>
+          </div>
+
+          <!-- Blogs section  -->
+          <div id="blogs">
+            <h2>Blogs</h2>
+            <section class="blogs-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px;">
+              <div class="blog-card" style="background: url('retirement.jpg') center/cover no-repeat; height: 230px; position: relative; border-radius: 10px; overflow: hidden;">
+                <div class="blog-caption" style="position: absolute; bottom: 0; background: rgba(0,0,0,0.5); color: white; width: 100%; padding: 15px;">
+                  <h3>🎓 Reflections from a Retired Professor</h3>
+                </div>
+              </div>
+            
+              <div class="blog-card" style="background: url('graduate_student.jpg') center/cover no-repeat; height: 230px; position: relative; border-radius: 10px; overflow: hidden;">
+                <div class="blog-caption" style="position: absolute; bottom: 0; background: rgba(0,0,0,0.5); color: white; width: 100%; padding: 15px;">
+                  <h3>🎓 Graduate Student Experiences</h3>
+                </div>
+              </div>
+            
+              <div class="blog-card" style="background: url('current_student.jpg') center/cover no-repeat; height: 230px; position: relative; border-radius: 10px; overflow: hidden;">
+                <div class="blog-caption" style="position: absolute; bottom: 0; background: rgba(0,0,0,0.5); color: white; width: 100%; padding: 15px;">
+                  <h3>📖 Insights from Current Students</h3>
+                </div>
+              </div>
+            
+              <div class="blog-card" style="background: url('research.jpg') center/cover no-repeat; height: 230px; position: relative; border-radius: 10px; overflow: hidden;">
+                <div class="blog-caption" style="position: absolute; bottom: 0; background: rgba(0,0,0,0.5); color: white; width: 100%; padding: 15px;">
+                  <h3>🔬 Campus Research Articles</h3>
+                </div>
+              </div>
+            </section>
+            
+          </div>
+      </section>
+
+      
+      <!-- Footer -->
+
+      <section id="contact">
+        <div class="contact-header">
+          <h2>Contact Us</h2>
+        </div>
+        <footer>
+          <div class="contact">
+            <div class="social-media">
+              <h3>Social media links</h3>
+              <div class="social">
+                <div class="sovial-icons">
+                  <a href="https://facebook.com"><i class="fab fa-facebook-f"> facebook</i></a><br><br>
+                  <a href="https://instagram.com"><i class="fab fa-instagram"> Instagram</i></a><br><br>
+                  <a href="https://sanothimicampus.edu.np"><i class="fas fa-globe"> website</i></a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form">
+              <form action="#" class="form-side">
+                <h3>Your information</h3>
+
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" placeholder=" Full name"><br><br>
+
+                <label for="email">Email address:</label><br>
+                <input type="email" id="email" placeholder=" youremail@gmail.com"><br><br>
+
+                <label for="contacts">Contact number:</label><br>
+                <input type="text" id="contacts" placeholder=" **********"><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea type="" id="message"></textarea><br><br>
+              </form>
+            </div>
+            <p>Sanothimi Campus, Bhaktapur, Nepal</p>
+            <p>Email: sanothimicampus.edu.np</p>
+            <p>Phone: +977-1234567890</p>
+
+          </div>
+          <p class="copyright">
+            &copy; 2025 Sanothimi campus. All rights reserved.
+          </p>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <script>
+
+    const counters = document.querySelectorAll('.count');
+
+    counters.forEach(counter => {
+      counter.innerText = '0';
+
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = Math.ceil(target / 100);
+
+        if (count < target) {
+          counter.innerText = count + increment;
+          setTimeout(updateCounter, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCounter();
+    });
+
+    function confirmLogout(event) {
+      event.preventDefault();
+      if (confirm('Are you sure you want to sign out?')) {
+        localStorage.removeItem('userEmail');     // clear stored session/email
+        window.location.href = 'login.html';
+      }
+    }
+
+    // Get email from localStorage (or however you store it after login)
+    document.addEventListener('DOMContentLoaded', () => {
+      const userEmail = localStorage.getItem('userEmail');    // get email from localStorage
+
+      if (!userEmail) {
+        alert("No email found, please log in first.");
+        window.location.href = 'login.html';
+        return;
+      }
+      // if (userEmail) {
+      // fetch(`/api/user/${userEmail}`)
+      fetch(`/get-user?email=${encodeURIComponent(userEmail)}`)
+        // .then(res => {
+        //   if (!res.ok) throw new Error("User not found");
+        //   return res.json();
+        // })
+        .then(res => res.json())
+        .then(user => {
+          document.getElementById('photo').src = user.photo ? `/uploads/${user.photo}` : 'default-photo.jpg';
+          document.getElementById('name').textContent = `${user.firstName} ${user.middleName} ${user.lastName}`;
+          document.getElementById('dob').textContent = `DOB: ${user.dob}`;
+          document.getElementById('email').textContent = `Email: ${user.email}`;
+          document.getElementById('contact').textContent = `Contact: ${user.contact}`;
+          document.getElementById('faculty').textContent = `Faculty: ${user.faculty}`;
+          document.getElementById('startYear').textContent = `Start Year: ${user.startYear}`;
+          document.getElementById('endYear').textContent = `End Year: ${user.endYear}`;
+        })
+        .catch(err => console.error('Error loading profile:', err));
+      //   } else {
+      //     console.warn('No userEmail found in localStorage');
+      //   }
+    });
+    // login
+    const user = localStorage.getItem('loggedInUser');
+    if (!user) {
+      alert("Please login first.");
+      window.location.href = "login.html";
+    } else {
+      document.getElementById('welcomeText').textContent = `Hello, ${user}!`;
+    }
+  </script>
+
+</body>
+
+</html>

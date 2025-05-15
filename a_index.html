@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanothimi Campus - School Management System</title>
+  <meta name="description" content="Sanothimi Campus School Management System - Affiliated by Tribhuvan University" />
+  <meta name="author" content="Sanothimi Campus" />
+
+  <!-- Google Fonts - Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="a_styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Mobile Navigation Toggle -->
+    <div class="mobile-nav">
+      <div class="mobile-nav-header">
+        <img src="logo.png" alt="Sanothimi Logo" class="mobile-logo">
+        <h3>Sanothimi</h3>
+        <button id="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <nav class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a href="#home" class="mobile-link">Home</a></li>
+          <li><a href="#courses" class="mobile-link">Courses</a></li>
+          <li><a href="#dashboard" class="mobile-link">Dashboard</a></li>
+          <li><a href="#notices" class="mobile-link">Notices</a></li>
+          <li><a href="#blogs" class="mobile-link">Blogs</a></li>
+          <li><a href="#events" class="mobile-link">Programs & Events</a></li>
+          <li><a href="#contact" class="mobile-link">Contact Us</a></li>
+          <li><a href="#" class="mobile-link logout-link">Log Out</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="logo.png" alt="Sanothimi Campus Logo" class="logo">
+        <h3>Sanothimi Campus</h3>
+        <p>Affiliated by Tribhuvan University</p>
+      </div>
+
+      <!-- Navigation Menu -->
+     <nav class="nav-menu" aria-label="Sidebar navigation">
+
+        <ul>
+          <li>
+            <a href="#home">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#courses">
+              <i class="fas fa-book"></i>
+              <span>Courses</span>
+            </a>
+          </li>
+          <li>
+            <a href="#dashboard">
+              <i class="fas fa-chart-bar"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#notices">
+              <i class="fas fa-bell"></i>
+              <span>Notices</span>
+            </a>
+          </li>
+          <li>
+            <a href="#blogs">
+              <i class="fas fa-newspaper"></i>
+              <span>Blogs</span>
+            </a>
+          </li>
+          <li>
+            <a href="#events">
+              <i class="fas fa-calendar"></i>
+              <span>Programs & Events</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              <i class="fas fa-envelope"></i>
+              <span>Contact Us</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="logout-link">
+              <i class="fas fa-sign-out-alt"></i>
+              <span>Log Out</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Bar - Desktop -->
+      <div class="topbar">
+        <div class="search-container">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" placeholder="Search..." class="search-input">
+        </div>
+        <div class="topbar-links">
+          <a href="#notices">
+            <i class="fas fa-bell"></i>
+            <span>News and Notices</span>
+          </a>
+          <a href="#contact">
+            <i class="fas fa-envelope"></i>
+            <span>Contacts</span>
+          </a>
+          <div class="user-icon">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content Sections -->
+      <section id="home" class="section">
+        <div class="content-card">
+          <h1 class="animate-fade-in">Welcome to Sanothimi Campus!</h1>
+          <p class="subtitle">Empowering students with innovation, technology, and excellence in education.</p>
+          
+          <div class="feature-image">
+            <!-- <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="College Campus"> -->
+            <img src="sanothimi.jpg" alt="College Campus">
+          </div>
+
+          <!-- About Section -->
+          <div class="about-section">
+            <h2>
+              📚 About History of Sanothimi Campus
+              <span>– A Legacy of Excellence</span>
+            </h2>
+            
+            <p>
+              Sanothimi Campus, officially known as <strong>Tribhuvan University Sanothimi Education Campus</strong>, is one of the oldest and most prestigious education campuses in Nepal. Established in <strong>2023 B.S. (1966 A.D.)</strong>, it was founded under the Ministry of Education to provide professional teacher training and quality education in the field of <strong>education and pedagogy</strong>.
+            </p>
+
+            <p>
+              Located in <strong>Bhaktapur, Nepal</strong>, Sanothimi Campus played a pioneering role in shaping Nepal's education system by preparing thousands of competent educators and academic leaders. Initially started with a focus on <em>Education and Teaching Training Programs</em>, the campus later became a <strong>constituent campus of Tribhuvan University</strong>, Nepal's oldest and largest university.
+            </p>
+
+            <p>Over the years, Sanothimi Campus expanded its academic offerings to include programs like:</p>
+            <ul class="offerings-list">
+              <li>Bachelor in Information Communication Technology Education (BICTE)</li>
+              <li>Bachelor of Business Studies (BBS)</li>
+              <li>Bachelor of Education (B.Ed.) in various subjects</li>
+              <li>Master of Education (M.Ed.)</li>
+              <li>Post Graduate Diploma in Education (PGDE)</li>
+              <li>Special Need Education (SNE)</li>
+            </ul>
+
+            <p>
+              The campus is renowned for its highly experienced faculty, strong academic environment, and dedication to excellence in teaching, learning, and research.
+            </p>
+            
+            <div class="legacy-note">
+              <p>
+                With a rich legacy of over five decades, Sanothimi Campus continues to be a center of academic distinction and a beacon for aspiring educators across the country.
+              </p>
+            </div>
+          </div>
+
+          <!-- Awards Section -->
+          <div class="awards-section">
+            <h2>Our Achievements</h2>
+            <div class="awards-grid">
+              <div class="award-card">
+                <div class="award-icon">
+                  <i class="fas fa-award"></i>
+                </div>
+                <h3>Best IT College 2024</h3>
+                <p>Awarded by Nepal Education Board</p>
+              </div>
+              
+              <div class="award-card">
+                <div class="award-icon">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Innovation in Teaching</h3>
+                <p>Recognized by TechEdu Conference</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonials Section -->
+          <div class="testimonials-section">
+            <h2>Testimonials</h2>
+            <div class="testimonial-slider-container">
+              <div class="testimonial-slider" id="testimonialSlider">
+                <!-- Testimonials will be inserted by JavaScript -->
+              </div>
+              
+              <!-- Pagination dots -->
+              <div class="slider-pagination" id="testimonialPagination">
+                <!-- Pagination will be inserted by JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Courses Section -->
+        <div id="courses" class="section">
+          <div class="content-card">
+            <h2>Our Academic Programs</h2>
+            
+            <div class="course-tabs-container">
+              <div class="course-tabs" id="courseTabs">
+                <!-- Course tabs will be inserted by JavaScript -->
+              </div>
+              
+              <div class="course-content" id="courseContent">
+                <!-- Course content will be inserted by JavaScript -->
+              </div>
+              
+              <!-- Course pagination dots -->
+              <div class="slider-pagination" id="coursePagination">
+                <!-- Course pagination will be inserted by JavaScript -->
+              </div>
+            </div>
+            
+            <div class="campus-features">
+              <h3>Why Choose Sanothimi Campus?</h3>
+              <div class="features-grid">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fas fa-university"></i>
+                  </div>
+                  <h4>Academic Excellence</h4>
+                  <p>With over 50+ years of academic excellence, our campus offers quality education with experienced faculty.</p>
+                </div>
+                
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fas fa-lightbulb"></i>
+                  </div>
+                  <h4>Innovation Focus</h4>
+                  <p>We integrate innovative teaching methodologies and technologies to prepare future-ready educators.</p>
+                </div>
+                
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <h4>Community Network</h4>
+                  <p>Join a supportive community of learners, educators, and alumni with strong professional networks.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard section -->
+        <div id="dashboard" class="section">
+          <div class="content-card">
+            <h2>Dashboard</h2>
+            <div class="dashboard-stats" id="dashboardStats">
+              <!-- Stats will be inserted by JavaScript -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Notices section -->
+        <div id="notices" class="section">
+          <div class="content-card">
+            <h2>Notices & Announcements</h2>
+            <div class="notices-container" id="noticesContainer">
+              <!-- Notices will be inserted by JavaScript -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Blogs section -->
+        <div id="blogs" class="section">
+          <div class="content-card">
+            <h2>Blogs</h2>
+            <div class="blog-grid" id="blogGrid">
+              <!-- Blog posts will be inserted by JavaScript -->
+            </div>
+          </div>
+        </div>
+        
+        <!-- Programs & Events section -->
+        <div id="events" class="section">
+          <div class="content-card">
+            <h2>Programs & Events</h2>
+            <div class="events-container" id="eventsContainer">
+              <!-- Events will be inserted by JavaScript -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact section -->
+        <div id="contact" class="section">
+          <div class="content-card">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+              <div class="contact-info">
+                <h3>Connect With Us</h3>
+                <div class="info-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p>Sanothimi Campus, Bhaktapur, Nepal</p>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-envelope"></i>
+                  <p>sanothimicampus.edu.np</p>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-phone"></i>
+                  <p>+977-1234567890</p>
+                </div>
+
+                <h3>Social Media</h3>
+                <div class="social-links">
+                  <a href="https://facebook.com" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="https://instagram.com" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://sanothimicampus.edu.np" class="social-link">
+                    <i class="fas fa-globe"></i>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm">
+                  <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" placeholder="Full name" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" id="email" placeholder="youremail@gmail.com" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="contacts">Contact number:</label>
+                    <input type="text" id="contacts" placeholder="**********">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" rows="4" required></textarea>
+                  </div>
+                  
+                  <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="copyright">
+          &copy; 2025 Sanothimi Campus. All rights reserved.
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="a_script.js" defer></script>
+</body>
+</html>

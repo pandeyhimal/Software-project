@@ -1,0 +1,22 @@
+# Node.js
+node_modules/
+.env
+npm-debug.log
+
+# PHP
+vendor/
+composer.lock
+
+# General
+*.log
+*.tmp
+*.bak
+.DS_Store
+.idea/
+.vscode/
+
+# XAMPP-related
+xampp/
+
+
+uploads/
