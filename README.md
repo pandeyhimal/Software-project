@@ -33,21 +33,7 @@ This repository contains a basic demo of a full-stack web application that inclu
       File Upload: Multer 
 
 📂 Folder Structure
-      bash
-      Copy
-      Edit
-      software-project/
-      ├── frontend/
-      │   ├── login.html
-      │   ├── registration.html
-      │   ├── dashboard.html
-      ├── backend/
-      │   ├── server.js
-      │   ├── models/
-      │   ├── routes/
-      ├── public/
-      ├── uploads/
-      └── README.md
+      This is just the practice project so the folder structure is not maintained properly. But anyway I suggest you to follow the industry-based folder structure for the best        practice.
 ✅ Future Improvements
       Form validation enhancements
       
